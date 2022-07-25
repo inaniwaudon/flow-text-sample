@@ -1,6 +1,6 @@
 # flow-text-sample
 
-標準の Web では実現不能な、自由自在なテキストの流し込みを行うためのサンプル
+標準の Web では実現不能な、自由自在なテキストの流し込みを行うためのサンプル  
 サンプル： https://inaniwaudon.github.io/flow-text-sample/
 
 ```bash
