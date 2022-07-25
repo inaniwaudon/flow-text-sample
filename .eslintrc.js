@@ -32,5 +32,7 @@ module.exports = {
       },
     ],
     'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.ts'] }],
+    'react/no-array-index-key': 'off',
+    'react/function-component-definition': [2, { namedComponents: 'arrow-function' }],
   },
 };
