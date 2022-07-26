@@ -38,13 +38,13 @@ export const calculateParagraphHeight = (
   // biary search
   let [left, right] = [0, paragraph.content.length];
   let measuredHeight = 0;
-  while (right - left > 1) {
+  while (right - left > 0) {
     const mid = Math.ceil((left + right) / 2);
     measuredHeight = calculate(paragraph.content.substring(0, mid));
-    if (measuredHeight < leftHeight) {
-      left = mid;
-    } else {
+    if (measuredHeight > leftHeight) {
       right = mid - 1;
+    } else {
+      left = mid;
     }
   }
   return [right, measuredHeight];
@@ -85,7 +85,7 @@ export const flowText = (paragraphs: Paragraph[], boxes: TextBox[]): Paragraph[]
     }
   });
 
-  // document.body.removeChild(measuringElement);
+  document.body.removeChild(measuringElement);
   return resultParagraphs;
 };
 
